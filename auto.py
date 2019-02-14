@@ -87,60 +87,60 @@ response = client.modify_load_balancer_attributes(
 
 
 
-# test1 = 'user_data\nset -e -x\nsudo yum update -y\nsudo yum install -y httpd24 php72 php72-mysqlnd\n',
-# test2 = 'sudo service httpd start\ncd /var/www/html\nsudo git clone https://github.com/ChristianHMeier/cc-images',
-# client2 = boto3.client('autoscaling')
-# response = client2.create_launch_configuration(
-#     LaunchConfigurationName='autoscaling-launchconfiguration',
-#     ImageId='ami-a0cfeed8',
-#     KeyName='saqib1-key',
-#     SecurityGroups=[
-#         'sg-8eed3cfc',
-#     ],
-#     # ClassicLinkVPCId='string',
-#     # ClassicLinkVPCSecurityGroups=[
-#     #     'string',
-#     # ],
-#
-#     UserData='',
-#         # '#!/bin/bash',
-#         # 'set -e -x',
-#         # 'sudo yum update -y',
-#         # 'sudo yum install -y httpd24 php72 php72-mysqlnd',
-#         # 'sudo service httpd start',
-#         # 'sudo yum install git -y',
-#         # 'cd /var/www/html',
-#         # 'sudo git clone https://github.com/ChristianHMeier/cc-images',
-#
-#     # InstanceId='string',
-#     InstanceType='t2.micro',
-#     KernelId='Use default',
-#     RamdiskId='Use default',
-#     BlockDeviceMappings=[
-#         {
-#
-#             # 'VirtualName': 'string',
-#             'DeviceName': '/dev/xvda',
-#             'Ebs': {
-#                 'SnapshotId': 'snap-0b9ac5da0147e5eb2',
-#                 'VolumeSize': 8,
-#                 'VolumeType': 'standard',
-#                 'DeleteOnTermination': True,
-#                 # 'Iops': 100 / 3000,
-#                 'Encrypted': False
-#             },
-#             # 'NoDevice': False
-#         },
-#     ],
-#     InstanceMonitoring={
-#         'Enabled': False
-#     },
-#     # SpotPrice='string',
-#     IamInstanceProfile='S3-Role',
-#     EbsOptimized=False,
-#     AssociatePublicIpAddress=True,
-#     PlacementTenancy='default'
-# )
+test1 = 'user_data\nset -e -x\nsudo yum update -y\nsudo yum install -y httpd24 php72 php72-mysqlnd\n',
+test2 = 'sudo service httpd start\ncd /var/www/html\nsudo git clone https://github.com/ChristianHMeier/cc-images',
+client2 = boto3.client('autoscaling')
+response = client2.create_launch_configuration(
+    LaunchConfigurationName='autoscaling-launchconfiguration',
+    ImageId='ami-a0cfeed8',
+    KeyName='saqib1-key',
+    SecurityGroups=[
+        'sg-8eed3cfc',
+    ],
+    # ClassicLinkVPCId='string',
+    # ClassicLinkVPCSecurityGroups=[
+    #     'string',
+    # ],
+
+    UserData='',
+        # '#!/bin/bash',
+        # 'set -e -x',
+        # 'sudo yum update -y',
+        # 'sudo yum install -y httpd24 php72 php72-mysqlnd',
+        # 'sudo service httpd start',
+        # 'sudo yum install git -y',
+        # 'cd /var/www/html',
+        # 'sudo git clone https://github.com/ChristianHMeier/cc-images',
+
+    # InstanceId='string',
+    InstanceType='t2.micro',
+    KernelId='Use default',
+    RamdiskId='Use default',
+    BlockDeviceMappings=[
+        {
+
+            # 'VirtualName': 'string',
+            'DeviceName': '/dev/xvda',
+            'Ebs': {
+                'SnapshotId': 'snap-0b9ac5da0147e5eb2',
+                'VolumeSize': 8,
+                'VolumeType': 'standard',
+                'DeleteOnTermination': True,
+                # 'Iops': 100 / 3000,
+                'Encrypted': False
+            },
+            # 'NoDevice': False
+        },
+    ],
+    InstanceMonitoring={
+        'Enabled': False
+    },
+    # SpotPrice='string',
+    IamInstanceProfile='S3-Role',
+    EbsOptimized=False,
+    AssociatePublicIpAddress=True,
+    PlacementTenancy='default'
+)
 
 ##########################################################################################
 
